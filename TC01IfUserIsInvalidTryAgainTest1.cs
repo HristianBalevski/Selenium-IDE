@@ -21,13 +21,7 @@ public class TC01IfUserIsInvalidTryAgainTest
     [SetUp]
     public void SetUp()
     {
-        ChromeOptions options = new ChromeOptions();
-        options.AddArgument("--no-sandbox");
-        options.AddArgument("--disable-dev-shm-usage");
-        options.AddArgument("--headless");  // Run in headless mode to avoid UI issues
-        options.AddArgument("--user-data-dir=/tmp/chrome-user-data"); // Specify unique directory
 
-        ChromeDriver driver = new ChromeDriver(options);
         driver = new ChromeDriver();
         js = (IJavaScriptExecutor)driver;
         vars = new Dictionary<string, object>();
